@@ -2,6 +2,8 @@ export interface Billboard {
     id: string;
     label: string;
     imageUrl: string;
+    buttonLabel: string;
+    buttonColor: Color;
 }
 
 export interface Category {

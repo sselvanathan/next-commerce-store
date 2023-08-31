@@ -14,12 +14,19 @@ const Billboard: React.FC<BillboardProps> = (
             <div
                 className="rounded-xl relative aspect-square md:aspect-[2.4/1] overflow-hidden bg-cover"
                 style={{backgroundImage: `url(${data?.imageUrl})`}}>
-                <div
-                    className="h-full w-full flex flex-col justify-center items-center text-center gap-y-8">
+                <div className="h-full w-full flex flex-col justify-center items-center text-center gap-y-8">
                     <div className="font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
-                        {data.label}
+                        {data?.label}
                     </div>
                 </div>
+                {data?.buttonLabel && (
+                    <button
+                        className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white px-4 py-2 rounded"
+                        style={{ backgroundColor: data?.buttonColor?.value }}
+                    >
+                        {data?.buttonLabel}
+                    </button>
+                )}
             </div>
         </div>
     )
