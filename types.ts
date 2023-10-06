@@ -39,3 +39,9 @@ export interface Color {
     name: string;
     value: string;
 }
+
+export interface Layout {
+    id: string;
+    name: string;
+    markdown: string;
+}
